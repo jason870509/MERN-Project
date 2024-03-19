@@ -12,6 +12,7 @@ import EnrollComponent from "./components/enroll-component";
 
 function App() {
   let [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser());
+  console.log(process.env.REACT_APP_API_URL);
   return (
     <BrowserRouter>
       <Routes>
