@@ -8,7 +8,7 @@ require("./config/passport")(passport);
 const cors = require("cors");
 
 mongoose
-  .connect("mongodb://localhost:27017/mernDB")
+  .connect(process.env.MONGODB_CONNECTION)
   .then(console.log("Connect to MongoDB"))
   .catch((e) => console.log(e));
 
